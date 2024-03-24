@@ -50,3 +50,20 @@ exports.getIdeaBasedOnId =(req,res)=>{
     }
 }
 
+
+/**
+ * Controller to create the new idea
+ */
+
+exports.createIdea = (req,res) => {
+
+    idea_object = req.body
+    id++
+    idea_object["id"] = id
+    ideas[id] = idea_object
+
+    //Add the new object provided in the ideas object
+
+    //Return the response
+    res.status(201).send(idea_object)
+}

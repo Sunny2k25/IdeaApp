@@ -5,6 +5,8 @@
 const express = require('express')
 const app = express()
 
+app.use(express.json())
+
 
 //Stiching the Route here
 require("./routes/idea.route")(app)
