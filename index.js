@@ -3,8 +3,15 @@
  */
 
 const express = require('express')
-
 const app = express()
+
+
+//Stiching the Route here
+require("./routes/idea.route")(app)
+
+
+
+
 
 app.listen(8000,()=>{
     console.log("App started at the port number ", 8000);
