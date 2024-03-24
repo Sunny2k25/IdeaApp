@@ -22,7 +22,31 @@ exports.getAllideas = (req,res)=>{
     //return all those idea
 
     res.status(200).send(ideas)  //Here 200 is http status code
-
-
-
 }
+
+
+/**
+ * Controller that fetch the idea based on the id
+ * 
+ * GET 127.0.0.1:8000/ideaApp/api/v1/ideas/2
+ * 
+ */
+
+exports.getIdeaBasedOnId =(req,res)=>{
+
+
+    //We need first read the idea id from the req param
+
+    idea_id = req.params.id
+
+    //Using id check if the idea with that id is present 
+
+    if(ideas[idea_id]){
+        res.status(200).send(ideas[idea_id])
+    }else{
+        res.status(404).send({
+            error : "Idea is not present by this id!"
+        })
+    }
+}
+
