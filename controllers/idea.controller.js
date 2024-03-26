@@ -5,7 +5,7 @@
 
 const ideas = require("../models/ideas.model")
 
-id =3;
+let id =3;
 /**
  * Create the controller for fetching all the ideas 
  * 
