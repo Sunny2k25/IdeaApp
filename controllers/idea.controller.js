@@ -68,3 +68,12 @@ exports.createIdea = (req,res) => {
     //Return the response
     res.status(201).send(idea_object)
 }
+
+
+/**
+ * Controller for Updating the idea 
+ */
+
+exports.updateIdea = (req,res) =>{
+    
+}
