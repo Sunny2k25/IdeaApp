@@ -76,4 +76,5 @@ exports.createIdea = (req,res) => {
 
 exports.updateIdea = (req,res) =>{
     
+    update_idea = req.body 
 }
