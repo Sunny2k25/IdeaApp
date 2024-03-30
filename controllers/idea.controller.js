@@ -97,3 +97,33 @@ exports.updateIdea = (req,res) =>{
 
     //
 }
+
+/**
+ * Controlller for Delete the idea
+ */
+
+exports.deleteIdea = (req,res) =>{
+    
+    //Fetch the idea and see if present
+    idea_id = req.params.id
+
+
+    if(ideas[idea_id])
+    {
+        //Delete it
+        delete ideas[idea_id];
+        res.status(200).send({
+            message: "Yay, Idea deleted successfully"
+        });
+
+    }else{
+        return res.status(404).send({
+            message : "Idea id you wanted to delete is already not present boss!"
+        })
+
+    }
+
+    //
+
+
+}

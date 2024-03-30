@@ -13,12 +13,18 @@ module.exports = (app)=>{
 
 
     //Yaha pe path param ka concept aaya hain toh isko dhyan rakhna
-
+    
+    //GET 127.0.0.1:8000/ideaApp/api/v1/ideas/5
     app.get("/ideaApp/api/v1/ideas/:id",idea_controller.getIdeaBasedOnId)
-
+    
+    //POST 127.0.0.1:8000/ideaApp/api/v1/ideas
     app.post("/ideaApp/api/v1/ideas",idea_controller.createIdea)
 
-
+    //PUT 127.0.0.1:8000/ideaApp/api/v1/ideas/3
     app.put("/ideaApp/api/v1/ideas/:id",idea_controller.updateIdea)
+    
+
+    //DELETE 127.0.0.1:8000/ideaApp/api/v1/ideas/3
+    app.delete("/ideaApp/api/v1/ideas/:id",idea_controller.deleteIdea);
 }
 
